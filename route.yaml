@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: validating-routing
+  annotations:
+    router.cern.ch/technical-network-access: "true"
+    router.cern.ch/network-visibility : "Internet"
+spec:
+  host: www.example.com
+  to:
+    kind: Service
+    name: validating-service
